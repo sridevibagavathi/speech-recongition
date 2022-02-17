@@ -1,0 +1,78 @@
+<!-- <div class='outer-div'>
+    <h2 class="padding-top10 text-light center">EYED</h2>
+    <div class="transcript-div">
+        <span id="final" class="text-light">{{final}}</span>
+        <span id="interim" class="text-secondary">{{interim}}</span>
+    </div>
+    <div class="padding-top10">
+        <div *ngIf="micOn" class="align-mic-div">
+            <mat-icon (click)="record()" class="mic">mic</mat-icon>
+        </div>
+        <div>
+            <button class="light margin-right10" mat-button-rasied id="play" type="button" mat-button
+                (click)="play()">Play</button>
+            <button class="blue margin-right10" mat-button-rasied id="save" type="button" mat-button
+                (click)="send()">Send</button>
+        </div>
+        <div *ngIf="micOff" class="align-mic-div">
+            <mat-icon id="stop" (click)="stop()" class="mic">mic_off</mat-icon>
+        </div>
+        <p *ngIf="listenStatus" class="lead mt-3 text-light">Listenting ...</p>
+    </div>
+</div> -->
+
+<h1 class="padding-top10 center"><b>EY-ED</b></h1>
+<div class="first-level-div">
+    <div class='outer-div'>
+        <div class="inner-div">
+            <h2 style="color:#645df9">Speech recognition</h2>
+            <div class="card-button">
+                <mat-card class="card">
+                    <span id="final">{{final}}</span>
+                    <span id="interim">{{interim}}</span>
+                </mat-card>
+                <div class="button-timer">
+                    <!-- <button [disabled]="!audio" type="button"> -->
+                    <button mat-button [disabled]="!audio" (click)="reset()"
+                        style="width: fit-content;">
+                        <mat-icon class="padding-left-3-rem margin-bottom10">refresh</mat-icon>
+                    </button>
+                    <button *ngIf=playButton mat-button [disabled]="!audio" (click)="play()"
+                        style="width: fit-content;">
+                        <mat-icon class="padding-left-3-rem margin-bottom10">play_circle_outline</mat-icon>
+                    </button>
+                    <button *ngIf=pauseButton mat-button [disabled]="!audio" (click)="pause()"
+                        style="width: fit-content;">
+                        <mat-icon class="padding-left-3-rem margin-bottom10">pause_circle_outline</mat-icon>
+                    </button>
+                    <button mat-button [disabled]="!audio" (click)="pause()" style="width: fit-content;">
+                        <mat-icon class="padding-left-3-rem margin-bottom10" (click)="send()">send</mat-icon>
+                    </button>
+                    <!-- <button class="light margin-bottom10" mat-button-rasied type="button" mat-button>
+                    </button>
+                    <button class="light margin-bottom10" mat-button-rasied type="button" mat-button>
+                    </button> -->
+                    <!-- <button class="blue margin-bottom10" mat-button-rasied type="button" mat-button >
+                        
+                    </button> -->
+                    <span>{{counter | formatTime}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="padding-top10">
+            <p *ngIf="listenStatus" class="listen">Listenting ...</p>
+            <div *ngIf="micOn" class="align-mic-div">
+                <mat-icon (click)="record()" class="mic">mic</mat-icon>
+            </div>
+            <div *ngIf="micOff" class="align-mic-div">
+                <mat-icon id="stop" (click)="stop()" class="mic">mic_off</mat-icon>
+            </div>
+        </div>
+    </div>
+    <div id="saved-audio-messages">
+        <h2>Saved messages</h2>
+        <mat-card class="audio-card row">
+            <audio class="column" *ngFor="let a of allAudioFiles;" src="{{a.src}}" controls="true"></audio>
+        </mat-card>
+    </div>
+</div>

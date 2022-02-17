@@ -1,0 +1,143 @@
+.first-level-div{
+    margin: 1.5rem;
+    display: flex;
+}
+.outer-div{
+}
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.inner-div{
+    min-height: 60vh;
+    max-width: 850px;
+    width: 650px;
+    text-align: center;
+    justify-content: center;
+    padding: 16px;
+    font-weight: 700;
+    margin-top: 3rem;
+}
+.card{
+    background-color: white;
+    min-height: 50vh;
+    width: 650px;
+}
+.audio-card{
+    background-color: white;
+    max-height: 50vh;
+    min-height: 50vh;
+    width: 600px;
+    overflow: auto;
+}
+.card-button{
+    display:inline-flex;
+    align-items: center;
+}
+span{
+    color: black;
+    font-size: small;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.text-light{
+    color: #f8f9fa;
+}
+.bg-secondary{
+    background-color: #6c757d;
+}
+select{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+}
+.padding-top10{
+    color: #645df9;
+    font-size: xxx-large;
+    margin-top: 1rem;
+}
+.transcript-div{
+    border: 1px solid gray; 
+    height: 300px; 
+    border-radius: 8px;
+    width: 75%;
+    margin: 5px 170px;
+}
+.text-secondary{
+    color: #6c757d
+}
+.success{
+    font-size: 50px;
+    color: white;
+}
+.warn{
+    background-color: #dc3545;
+    color: white;
+}
+.light{
+    background-color: white;
+    color: black;
+}
+.blue{
+    background-color: #645df9;
+    color: white;
+}
+.margin-right10{
+    margin-right: 10px;
+}
+.margin-bottom10{
+    margin-left: 10px;
+    margin-bottom: 2rem;
+}
+.center{
+    text-align: center;
+}
+.mic{
+    width:200px;
+    font-size: 8rem;
+    color: #645df9;
+    cursor: pointer;
+}
+.align-mic-div{
+    width: 100%;
+    text-align: center;
+}
+.listen{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.button-timer{
+    display: grid;
+}
+.button-timer span{
+    margin-left: 10px;
+    padding-left: 2rem;
+}
+#saved-audio-messages{
+    color: #645df9;
+    margin-left: 8rem;
+    margin-top: 4rem;
+    text-align: center;
+}
+.padding-left-3-rem{
+    padding-left: 10px;
+    font-size: 3rem;
+}
+.disable{
+    color:red
+}
+.mat-button.mat-button-disabled.mat-button-disabled{
+    color: black;
+    opacity: 0.5;
+}
